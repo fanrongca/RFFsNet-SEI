@@ -6,7 +6,7 @@ We propose an accelerated emitter identification approach based on hybrid driven
 
 Through steps S1 → S6, in order to illustrate the effectiveness of the proposed neural network, we show the design process of RFFsNet-SEI in an incremental manner.
 The results indicate that RFFsNet-SEI can meet the needs of high real-time processing and high identification accuracy.
-|Steps |Notes |MFLOPs |para. |FPS |Simulated data Acc. |Real-data Acc. |
+|Steps |Notes |MFLOPs |Para. |FPS |Simulated data Acc. |Real-data Acc. |
 |:--: |:--:  |:--:  |:--:    |:--:    |:--:    |:--:    |
 |S1|RFFsNet-SEI-Basic|601.5|12976|15366|49.1%|21.0%|
 |S2|+ResBlocks1|1756.5|18384|10380|58.3%|39.2%|
