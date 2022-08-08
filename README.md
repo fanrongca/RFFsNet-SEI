@@ -4,9 +4,10 @@
 
 We propose an accelerated emitter identification approach based on hybrid driven scheme, namely RFFsNet-SEI. As RFFsNet-SEI identifies individual of emitters from received raw data in end-to-end, it accelerates the SEI implementation and simplifies the identification procedures. Based on simulation dataset and real dataset collected in the anechoic chamber, in terms of identification accuracy, computational complexity, and prediction speed, results illustrate that the proposed method outperforms existing methods.
 
+Through steps S1 → S6, in order to illustrate the effectiveness of the proposed neural network, we show the design process of RFFsNet-SEI in an incremental manner.
 TABLE I: The effectiveness study of RFFsNet-SEI. FPS represents frame per second.
 
-| |Methods |Parameters |MFLOPs |FPS |RMSE |
+|Steps  |Notes |MFLPOs|Para.|FPS |Simulated data Acc.|Real-data Acc.|
 |--- |---  |---  |---    |---    |---    |
 |A|YOLO-Basic|22.391M|81.041|1.74|1.9°,6.3°|
 |B|YOLO-ResNet18|5.496M|18.649|3.61|1.9°,7.2°|
@@ -17,10 +18,7 @@ TABLE I: The effectiveness study of RFFsNet-SEI. FPS represents frame per second
 |G|+ Grid Sensitive|0.081M|0.333|8.11|1.6°,6.5°|
 |H|+ SPP Layer|0.108M|0.397|8.04|1.5°,6.4°|
 
-Through steps A → F, the construction of YOLO-DoA is completed. Compared to YOLO-Basic, both the parameters and computational cost of YOLO-DoA are reduced by 99.6%.
-Meanwhile, the prediction speed is increased by a factor of 4.6 and RMSE is decreased obviously. Therefore, the effectiveness
-of YOLO-DoA is confirmed. Moreover, the Grid Sensitive and Spatial Pyramid Pooling(SPP) layer are additionally tested in the experiment. 
-The results show that these two modules will deteriorate performance of DoA estimation, hence they are not adopted in YOLO-DoA.
+
 
 # Updates
 - 【2022/01/19】We upload the source code of YOLO-DoA model
