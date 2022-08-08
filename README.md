@@ -8,15 +8,14 @@ Through steps S1 → S6, in order to illustrate the effectiveness of the propose
 TABLE I: The effectiveness study of RFFsNet-SEI. FPS represents frame per second.
 
 |Steps  |Notes |MFLPOs|Para.|FPS |Simulated data Acc.|Real-data Acc.|
-|--- |---  |---  |---    |---    |---    |
-|A|YOLO-Basic|22.391M|81.041|1.74|1.9°,6.3°|
-|B|YOLO-ResNet18|5.496M|18.649|3.61|1.9°,7.2°|
-|C|YOLO-ResNet18<sup>+|0.162M|0.721|8.22|2.3°,7.6°|
-|D|+ CSP Connection|0.080M|0.332|8.53|2.2°,7.5°|
-|E|+ GIoU Loss|0.080M|0.332|8.23|1.5°,6.5°|
-|F|+ SE Operation|0.081M|0.333|8.08|1.4°,6.2°|
-|G|+ Grid Sensitive|0.081M|0.333|8.11|1.6°,6.5°|
-|H|+ SPP Layer|0.108M|0.397|8.04|1.5°,6.4°|
+|--- |---  |---  |---    |---    |---    |------|---  |  
+|S1|RFFsNet-SEI-Basic |601.5 |12976|15366 |49.1% |21.0%|
+|S2|+ ResBlcoks1 |5.496M|18.649|3.61|1.9°,7.2°|
+|S3|+ ResBlcoks2|0.162M|0.721|8.22|2.3°,7.6°|
+|S4|+ auxiliary CBL blocks|0.080M|0.332|8.53|2.2°,7.5°|
+|S5|nC :16→8|0.080M|0.332|8.23|1.5°,6.5°|
+|S6|nC :16→32|0.081M|0.333|8.08|1.4°,6.2°|
+
 
 
 
