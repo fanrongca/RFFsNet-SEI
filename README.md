@@ -5,7 +5,7 @@
 We propose an accelerated emitter identification approach based on hybrid driven scheme, namely RFFsNet-SEI. As RFFsNet-SEI identifies individual of emitters from received raw data in end-to-end, it accelerates the SEI implementation and simplifies the identification procedures. Based on simulation dataset and real dataset collected in the anechoic chamber, in terms of identification accuracy, computational complexity, and prediction speed, results illustrate that the proposed method outperforms existing methods.
 
 Through steps S1 → S6, in order to illustrate the effectiveness of the proposed neural network, we show the design process of RFFsNet-SEI in an incremental manner.
-
+The results indicate that RFFsNet-SEI can meet the needs of high real-time processing and high identification accuracy.
 
 # Updates
 - 【2022/08/08】We upload the source code of RFFsNet-SEI model
