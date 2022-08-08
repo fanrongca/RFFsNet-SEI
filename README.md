@@ -49,9 +49,9 @@ Through steps S1 → S6, in order to illustrate the effectiveness of the propose
       Noted that saved_model.pb and the "variables" folder should remain in the same level of file path
 - (3) In Line 20, modify the "test_path" to the full path of the Valid tfrecord file (ie. Valid.tfrecord) 
 - (4) In Line 21, When the measured data set of 8 PAs is selected, "real_num" is set to 8; conversely, when the real data set of 10 PAs is selected, "real_num" is set to 8
-- (4) Run the yolovdoa_test.py
-- (5) The console will print RMSEs at scene ± 85 ° and scene ± 90 °
-- (6) CSV file (ie. predict.csv) containing real and predicted angels is generated in "saved_model_dir"
+- (4) Run the RFFsNet_SEI_predict.py
+- (5) The console will print Acc of the prediction
+- (6) CSV file (ie. predict.csv) containing real and predicted classification is generated in "saved_model_dir"
 
 # Contact
 Issues should be raised directly in the repository. For professional support requests for the current version of the code, please email fanrong@cafuc.edu.cn.
