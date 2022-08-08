@@ -43,7 +43,7 @@ Through steps S1 → S6, in order to illustrate the effectiveness of the propose
 - \8types\Valid.tfrecord -- A demonstration validation file containing sample and lable for 8 real PAs.
 - \8types\saved_model.pb -- the trained model of RFFsNet-SEI for 8 real PAs, "variables" folder contains the trained variables.
 
-# validation step
+# Validation step
 - (1) open the RFFsNet_SEI_predict.py
 - (2) In Line 19, modify the "saved_model_dir" to the full path where the trained model file (ie. saved_model.pb) is located.
       Noted that saved_model.pb and the "variables" folder should remain in the same level of file path
