@@ -5,23 +5,11 @@
 We propose an accelerated emitter identification approach based on hybrid driven scheme, namely RFFsNet-SEI. As RFFsNet-SEI identifies individual of emitters from received raw data in end-to-end, it accelerates the SEI implementation and simplifies the identification procedures. Based on simulation dataset and real dataset collected in the anechoic chamber, in terms of identification accuracy, computational complexity, and prediction speed, results illustrate that the proposed method outperforms existing methods.
 
 Through steps S1 → S6, in order to illustrate the effectiveness of the proposed neural network, we show the design process of RFFsNet-SEI in an incremental manner.
-TABLE I: The effectiveness study of RFFsNet-SEI. FPS represents frame per second.
-
-|Steps  |Notes |MFLPOs|Para.|FPS |Simulated data Acc.|Real-data Acc.|
-|--- |---  |---  |---    |---    |---    |------|---  |  
-|S1|RFFsNet-SEI-Basic |601.5 |12976|15366 |49.1% |21.0%|
-|S2|+ ResBlcoks1 |5.496M|18.649|3.61|1.9°,7.2°|
-|S3|+ ResBlcoks2|0.162M|0.721|8.22|2.3°,7.6°|
-|S4|+ auxiliary CBL blocks|0.080M|0.332|8.53|2.2°,7.5°|
-|S5|nC :16→8|0.080M|0.332|8.23|1.5°,6.5°|
-|S6|nC :16→32|0.081M|0.333|8.08|1.4°,6.2°|
-
-
 
 
 # Updates
-- 【2022/01/19】We upload the source code of YOLO-DoA model
-- 【2022/01/20】We upload test files and prediction code
+- 【2022/08/08】We upload the source code of RFFsNet-SEI model
+- 【2022/08/09】We upload test files and prediction code
   
 # Environments
 
@@ -43,24 +31,24 @@ TABLE I: The effectiveness study of RFFsNet-SEI. FPS represents frame per second
   
 - pandas 0.25.0
 
+- tensorflow 1.12.0
+
 - tensorflow-gpu 1.13.1
 
 # File description
-- yolovdoa_train.py -- Data preprocessing, model training, trained model storage function
-- yolovdoa.py -- Main function of YOLO-DoA, including Neck, Head sturcture, and loss calculation
-- tools.py -- Auxiliary function, including postprocess of predicted boxes,soft-NMS
-- computationcost.py-- Parameter statistics and  computational cost statistics function
-- modules.py -- Implementation functions of CBL and Ups
-- backbone.py -- Backbone of YOLO-DoA
-- yolovdoa_test.py -- Be responsible for reading the trained model and test file, outputting the predicted angle and calculating the RMSE
-- Test.tfrecord -- A demonstration test file containing sample and incident directions
-- saved_model.pb -- the trained model of YOLO-DoA, "variables" folder contains the trained variables.
-  
-# Test step
-- (1) open the yolovdoa_test.py
-- (2) In Line 30, modify the "test_path" to the full path of the test tfrecord file (ie. Test.tfrecord)
-- (3) In Line 31, modify the "saved_model_dir" to the full path where the trained model file (ie. saved_model.pb) is located.
+- RFFsNet_SEI_train.py -- Data preprocessing, model training, trained model storage function.
+- RFFsNet_SEI_predict.py -- Be responsible for reading the trained model and valid file, outputting the predicted classsification results and calculating the Accuracy.
+- \10types\Valid.tfrecord -- A demonstration validation file containing sample and lable for 10 simulated PAs.
+- \10types\saved_model.pb -- the trained model of RFFsNet-SEI for 10 simulated PAs, "variables" folder contains the trained variables.
+- \8types\Valid.tfrecord -- A demonstration validation file containing sample and lable for 8 real PAs.
+- \8types\saved_model.pb -- the trained model of RFFsNet-SEI for 8 real PAs, "variables" folder contains the trained variables.
+
+# validation step
+- (1) open the RFFsNet_SEI_predict.py
+- (2) In Line 19, modify the "saved_model_dir" to the full path where the trained model file (ie. saved_model.pb) is located.
       Noted that saved_model.pb and the "variables" folder should remain in the same level of file path
+- (3) In Line 20, modify the "test_path" to the full path of the Valid tfrecord file (ie. Valid.tfrecord) 
+- (4) In Line 21, When the measured data set of 8 PAs is selected, "real_num" is set to 8; conversely, when the real data set of 10 PAs is selected, "real_num" is set to 8
 - (4) Run the yolovdoa_test.py
 - (5) The console will print RMSEs at scene ± 85 ° and scene ± 90 °
 - (6) CSV file (ie. predict.csv) containing real and predicted angels is generated in "saved_model_dir"
