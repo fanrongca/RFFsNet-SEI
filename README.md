@@ -2,8 +2,7 @@
 
 # Introduction
 
-We propose an accelerated emitter identification approach based on hybrid driven scheme,namely RFFsNet-SEI. As RFFsNet-SEI identifies individual of emitters from received raw data in end-to-end, it accelerates the SEI implementation and simplifies the identification procedures. Based on simulation dataset and real dataset collected in the anechoic chamber, we compare RFFsNet-SEI with the counterparts in terms of identification accuracy, computational complexity, and prediction speed. Results illustrate that the
-proposed method outperforms existing methods.
+We propose an accelerated emitter identification approach based on hybrid driven scheme, namely RFFsNet-SEI. As RFFsNet-SEI identifies individual of emitters from received raw data in end-to-end, it accelerates the SEI implementation and simplifies the identification procedures. Based on simulation dataset and real dataset collected in the anechoic chamber, in terms of identification accuracy, computational complexity, and prediction speed. Results illustrate that the proposed method outperforms existing methods.
 
 TABLE I: The effectiveness study of YOLO-DoA. MPS represents the mini-batch per second.
 
