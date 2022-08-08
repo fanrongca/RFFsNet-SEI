@@ -56,7 +56,7 @@ The results indicate that RFFsNet-SEI can meet the needs of high real-time proce
 - (2) In Line 19, modify the "saved_model_dir" to the full path where the trained model file (ie. saved_model.pb) is located.
       Noted that saved_model.pb and the "variables" folder should remain in the same level of file path.
 - (3) In Line 20, modify the "test_path" to the full path of the Valid tfrecord file (ie. Valid.tfrecord).
-- (4) In Line 21, When the measured data set of 8 PAs is selected, "real_num" is set to 8; conversely, when the real data set of 10 PAs is selected, "real_num" is set to 10.
+- (4) In Line 21, When the measured data set of 8 PAs is selected, "real_num" is set to 8, conversely, when the real data set of 10 PAs is selected, "real_num" is set to 10.
 - (4) Run the RFFsNet_SEI_predict.py.
 - (5) The console will print Acc of the prediction.
 - (6) CSV file (ie. predict.csv) containing real and predicted classification is generated in "saved_model_dir".
