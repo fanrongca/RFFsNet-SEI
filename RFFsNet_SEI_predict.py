@@ -20,7 +20,7 @@ saved_model_dir = r'E:\Datas\DATA11\GitHub\8types\\'
 test_path = valid_path = r'E:\Datas\DATA11\GitHub\8types\Valid.tfrecord'
 real_num = 8
 
-valid_num = 2000*real_num
+valid_num = 1000*real_num
 BATCH_SIZE = 200
 TRAINING_EPOCH = 1
 TRAINING_STEPS = int(valid_num/BATCH_SIZE)
