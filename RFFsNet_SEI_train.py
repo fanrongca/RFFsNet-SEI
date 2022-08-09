@@ -9,11 +9,11 @@ import sys
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = '3'
 
 real_num = 8
-TRAINING_STEPS = 140*real_num
+TRAINING_STEPS = 120*real_num
 BATCH_SIZE = 200
 TRAINING_EPOCH = 100
-train_num = 28000*real_num
-valid_num = 2000*real_num
+train_num = 24000*real_num
+valid_num = 6000*real_num
 CLASSES = 12
 input_shape = 64
 output_shape2 = CLASSES
