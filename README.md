@@ -17,7 +17,7 @@ The results indicate that RFFsNet-SEI can meet the needs of high real-time proce
 
 # Updates
 - 【2022/08/08】We upload the source code of RFFsNet-SEI model
-- 【2022/08/09】We upload test files and prediction code
+- 【2022/08/09】We upload validation files and prediction code
   
 # Environments
 
